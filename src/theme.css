@@ -1,0 +1,122 @@
+/* CryptoVault Theme - Professional Crypto Investment Platform */
+
+:root {
+  /* Brand Colors - Bitcoin & Crypto Inspired */
+  --primary: #f7931a;        /* Bitcoin Orange */
+  --primary-dark: #e8851f;   /* Darker Orange */
+  --secondary: #00d4aa;      /* Crypto Green */
+  --secondary-dark: #00b894; /* Darker Green */
+  --accent: #6366f1;         /* Modern Purple */
+  
+  /* Semantic Colors */
+  --success: #10b981;        /* Green Success */
+  --warning: #f59e0b;        /* Amber Warning */
+  --error: #ef4444;          /* Red Error */
+  --info: #3b82f6;           /* Blue Info */
+  
+  /* Light Theme */
+  --bg: #ffffff;             /* Pure White Background */
+  --surface: #f8fafc;        /* Light Gray Surface */
+  --surface-elevated: #ffffff; /* White Elevated Surface */
+  --text: #0f172a;           /* Dark Text */
+  --text-secondary: #475569; /* Medium Gray Text */
+  --muted: #64748b;          /* Muted Text */
+  --border: #e2e8f0;         /* Light Border */
+  --border-light: #f1f5f9;   /* Very Light Border */
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  /* Spacing Scale */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;  /* 6px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-2xl: 1.5rem;   /* 24px */
+  
+  /* Typography */
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg: #0f172a;             /* Dark Navy Background */
+  --surface: #1e293b;        /* Dark Gray Surface */
+  --surface-elevated: #334155; /* Elevated Dark Surface */
+  --text: #f8fafc;           /* Light Text */
+  --text-secondary: #cbd5e1; /* Light Gray Text */
+  --muted: #94a3b8;          /* Muted Light Text */
+  --border: #334155;         /* Dark Border */
+  --border-light: #475569;   /* Lighter Dark Border */
+  
+  /* Adjust shadows for dark theme */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility Classes */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fadeIn { animation: fadeIn 0.3s ease-out; }
+.animate-pulse { animation: pulse 2s infinite; }
+.animate-float { animation: float 3s ease-in-out infinite; }
